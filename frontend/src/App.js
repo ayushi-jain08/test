@@ -8,10 +8,13 @@ function App() {
     const fetchallUser = async () => {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:7000/api/user/allusers", {
-          method: "GET",
-          mode: "cors",
-        });
+        const res = await fetch(
+          "https://test-23y4.onrender.com/api/user/allusers",
+          {
+            method: "GET",
+            mode: "cors",
+          }
+        );
         const data = await res.json();
         if (res.ok) {
           setDatas(data.user);
