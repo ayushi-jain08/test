@@ -13,10 +13,8 @@ function App() {
           mode: "cors",
         });
         const data = await res.json();
-        console.log(data);
         if (res.ok) {
           setDatas(data.user);
-          console.log("data", datas);
           setLoading(false);
         }
       } catch (error) {
