@@ -9,7 +9,7 @@ import user from "./Routes/User.js";
 const app = express();
 
 connectDB();
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -17,11 +17,11 @@ app.use(cors());
 
 app.use("/api/user", user);
 
-app.use(express.static(path.join(__dirname, "/frontend/build")));
+// app.use(express.static(path.join(__dirname, "/frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", " build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend", " build", "index.html"));
+// });
 //PORT
 const PORT = process.env.PORT || 6000;
 
